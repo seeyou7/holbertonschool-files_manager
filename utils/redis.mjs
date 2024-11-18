@@ -2,7 +2,8 @@ import redis from 'redis';
 
 class RedisClient {
     constructor() {
-        this.client = redis.createClient(); // Connect to Redis
+        this.client = redis.createClient(); 
+        // Connect to Redis
 
         // Handle Redis client errors
         this.client.on('error', (err) => {
@@ -11,7 +12,8 @@ class RedisClient {
     }
 
     isAlive() {
-        return this.client.connected; // Check if the client is connected
+        return this.client.connected;
+        // Check if the client is connected
     }
 
     async get(key) {
